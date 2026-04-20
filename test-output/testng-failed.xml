@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [DemoBlaze Login Test Suite]">
+  <test thread-count="5" name="All Login Tests(failed)">
+    <parameter name="password" value="karthik@123"/>
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="password2" value="wrongpassword123"/>
+    <parameter name="password1" value="karthik@123"/>
+    <parameter name="username2" value="karthiksiva"/>
+    <parameter name="username1" value="wronguser123"/>
+    <parameter name="url" value="https://www.demoblaze.com/"/>
+    <parameter name="username" value="karthiksiva"/>
+    <classes>
+      <class name="com.sample.seleniumlearndemo.demoblaze_divya">
+        <methods>
+          <include name="afterTest"/>
+          <include name="setup"/>
+          <include name="invalidTest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.sample.seleniumlearndemo.demoblaze_divya -->
+    </classes>
+  </test> <!-- All Login Tests(failed) -->
+</suite> <!-- Failed suite [DemoBlaze Login Test Suite] -->
