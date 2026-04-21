@@ -27,7 +27,6 @@ public class demoblaze_ram {
             WebDriverManager.chromedriver().setup();
 
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--headless=new");   // Jenkins important
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
 
