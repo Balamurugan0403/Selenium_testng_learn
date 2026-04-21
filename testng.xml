@@ -1,31 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-
 <suite name="DemoBlaze Login Test Suite">
-
     <test name="All Login Tests">
-        
+
         <parameter name="browser" value="Chrome" />
         <parameter name="url" value="https://www.demoblaze.com/" />
-
         <parameter name="username" value="karthiksiva" />
         <parameter name="password" value="karthik@123" />
-
         <parameter name="username1" value="wronguser123" />
         <parameter name="password1" value="karthik@123" />
-
         <parameter name="username2" value="karthiksiva" />
         <parameter name="password2" value="wrongpassword123" />
 
         <classes>
-            <class name="com.sample.seleniumlearndemo.demoblaze_ram"/>
-            <methods>
-            	<include name="loginTest"/>
-            	<include name="invalidTest2"/>
-            	<exclude name="invalidTest"/>
-            </methods>
+            <class name="com.sample.seleniumlearndemo.demoblaze_ram">
+                <methods>
+                    <include name="loginTest"/>
+                    <include name="invalidTest2"/>
+                    <exclude name="invalidTest"/>
+                </methods>
+            </class>
         </classes>
 
     </test>
-
 </suite>
