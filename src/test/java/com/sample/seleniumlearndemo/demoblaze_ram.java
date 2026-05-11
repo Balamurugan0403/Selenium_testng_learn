@@ -37,8 +37,6 @@ public class demoblaze_ram {
         driver.get(Url);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
-
-    // ✅ valid login
     @Parameters({"username", "password"})
     @Test(priority = 1)
     public void loginTest(String userName, String password) {
@@ -48,8 +46,6 @@ public class demoblaze_ram {
         driver.findElement(By.id("loginpassword")).sendKeys(password);
         driver.findElement(By.xpath("//button[text()='Log in']")).click();
     }
-
-    // ❌ invalid user
     @Test(priority = 2)
     @Parameters({"username1", "password1"})
     public void invalidTest(String userName, String password) {
@@ -68,8 +64,6 @@ public class demoblaze_ram {
         Assert.assertEquals(actual, expected, "Actual msg: " + actual);
         alert.accept();
     }
-
-    // ❌ wrong password
     @Test(priority = 3)
     @Parameters({"username2", "password2"})
     public void invalidTest2(String userName, String password) {
